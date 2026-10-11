@@ -10,7 +10,7 @@ membership_form.ps: membership_form.pdf
 	pdf2ps $< $@
 
 membership_form.pdf: FORCE
-	wget -N https://wiki.ehlab.uk/_media/membership_form.pdf -P tmp
+	wget -N https://wiki.ehlab.uk/_media/internal:membership_form.pdf -P tmp
 	cmp tmp/$@ $@ || cp -a tmp/$@ $@
 
 FORCE:
