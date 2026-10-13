@@ -11,6 +11,6 @@ membership_form.ps: membership_form.pdf
 
 membership_form.pdf: FORCE
 	wget -N https://wiki.ehlab.uk/_media/internal:membership_form.pdf -P tmp
-	cmp tmp/$@ $@ || cp -a tmp/$@ $@
+	cmp tmp/internal:$@ $@ || cp -a tmp/internal:$@ $@
 
 FORCE:
